@@ -1,0 +1,18 @@
+<!--i can use folder/wherever to reach a different location.-->
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+    <!-- i can put any html code here and it will be rendered for each page-->
+    <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>Avocado Toast</h2>
+            <h5>Breakfast</h5>
+            <image src="{{url_for('static', filename='images/avocado_toast.jpeg')}}", width="500" height="500"></image><br>
+            <p>Ingredients: Sourdough Bread, Avocado, Feta Cheese, Hot Peppers, Red Onion, Balsamic Vinegar, Salt and Pepper
+            </p>
+            <p>Instructions:Toast bread.  Slice avocado and onion and place on bread.  Sprinkle feta, peppers, balsamic vinegar, and salt and pepper. 
+          </div>
+          <div class="card">
+    
+{% endblock %}  

@@ -1,0 +1,20 @@
+<!--i can use folder/wherever to reach a different location.-->
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+    <!-- i can put any html code here and it will be rendered for each page-->
+    <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>Albondiga Soup</h2>
+            <h5>Dinner</h5>
+            <image src="{{url_for('static', filename='images/albondiga.jpeg')}}", width="500" height="600"></image><br>
+            <p>Ingredients:1 pound of ground beef, half a head of cabbage, bag of baby carrots, 1 can of corn, 1 pound of small fingerling potatoes, 2 zucchinis.
+                2 tablespoons of Oregano, 2 tablespoons of yerba buena, 2 handfuls of long grain rice, 3 tablespoons of powdered chicken bullion, garlic salt to taste.
+            </p>
+            <p>Instruction: Bring 6 cups of water to boil on the stove.  Combine ground beef and list of herbs along with the uncooked rice.  Roll into small bite sized meatballs.
+                Place meatballs into boiling water.  Chop vegetables as desired.  Add after 10 minutes.  Continue for another 10 minutes.  What you have is a surprisingly flavorful soup that's a crowd pleaser.     
+          </div>
+          <div class="card">
+    
+{% endblock %}  

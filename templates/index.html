@@ -1,0 +1,134 @@
+<!--i can use folder/wherever to reach a different location.-->
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+    <!-- i can put any html code here and it will be rendered for each page-->
+    <html>
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Add a gray background color with some padding */
+        body {
+          font-family: Arial;
+          padding: 20px;
+          background: #f1f1f1;
+        }
+        
+        /* Header/Blog Title */
+        .header {
+          padding: 30px;
+          font-size: 40px;
+          text-align: center;
+          background: white;
+        }
+        
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {   
+          float: left;
+          width: 75%;
+        }
+        
+        /* Right column */
+        .rightcolumn {
+          float: left;
+          width: 25%;
+          padding-left: 20px;
+        }
+        
+        /* Fake image */
+        .fakeimg {
+          background-color: #aaa;
+          width: 100%;
+          padding: 20px;
+        }
+        
+        /* Add a card effect for articles */
+        .card {
+           background-color: white;
+           padding: 20px;
+           margin-top: 20px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Footer */
+        .footer {
+          padding: 20px;
+          text-align: center;
+          background: #ddd;
+          margin-top: 20px;
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+          .leftcolumn, .rightcolumn {   
+            width: 100%;
+            padding: 0;
+          }
+        }
+        </style>
+        </head>
+        <body>
+        
+        
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+              <h2>Who Are We?</h2>
+              <h5>About Meal Ticket, Feb 12, 2024</h5>
+              <image src="{{url_for('static', filename='images/home_page.jpeg')}}"></image>
+              <p>What is this web application all about?</p>
+              <p>We started Meal Ticket for the person who doesn't have a lot of time to cook and who doesn't want to spend an arm and a leg for takeout.  
+                These are simple, affordable meals for the busy student, parent, adult low on time.  We have tried to keep every recipe as straight forward as possible so you can get back to what you love doing.
+              </p>
+            </div>
+            <div class="card">
+              <h2>Why Register?</h2>
+              <h5>Take A Look Around, Feb 12, 2024</h5>
+              <image src="{{url_for('static', filename='images/summer_soup.jpeg')}}"></image>
+              <p>What will you do for me?</p>
+              <p>We have a variety of sample recipes that you can browse to get an idea if this is right for you, or right for right now.  Easy to Login and keep you favorite recipes on hand.
+                There is even a place for you to rate and make notes on a recipe.  Did you change out some ingredients?  Did your stove work slower than the recipe state?  Keep track of all of that 
+                to fit your needs.
+              </p>
+            </div>
+          </div>
+          <div class="rightcolumn">
+            <div class="card">
+              <h2>About Me</h2>
+              <image src="{{url_for('static', filename='images/profile_pic.jpeg')}}"></image><br>
+              <p>I am a student and a parent of two boys.  Time is a luxury.  Eating well shouldn't be.</p>
+            </div>
+            <div class="card">
+              <h3>Popular Recipes</h3>
+              <image src="{{url_for('static', filename='images/avocado_toast.jpeg')}}"></image><br>
+              <image src="{{url_for('static', filename='images/summer_salad.jpeg')}}"></image><br>
+              <image src="{{url_for('static', filename='images/french_toast.jpeg')}}"></image><br>
+            </div>
+            <div class="card">
+              <h3>Updates!</h3>
+              <p>Growing Recipe List</p>
+              <p>User Account Security</p>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer">
+          <h2>&copy; 2024 Jacqueline Paulitz</h2>
+        </div>
+        
+        </body>
+        </html>
+    
+{% endblock %}  

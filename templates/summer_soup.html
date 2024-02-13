@@ -1,0 +1,19 @@
+<!--i can use folder/wherever to reach a different location.-->
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+    <!-- i can put any html code here and it will be rendered for each page-->
+    <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>Summer Soup</h2>
+            <h5>Dinner</h5>
+            <image src="{{url_for('static', filename='images/summer_soup.jpeg')}}", width="500" height="600"></image><br>
+            <p>Ingredients: 3 lbs of tomatoes, 2 cans of white beans, handful of basil, 8 oz of mozzerella cheese, parmesean cheese, salt and pepper.
+            </p>
+            <p>Instructions: Dice tomatoes and pour into a pot.  Place pot over a low flame.  Drain and rinse beans and pour into pot.  Cube mozzerella cheese and 
+              sprinkle parmesean.  Salt and Pepper to taste.  As soon as it comes to a simmer turn it off.  What you'll have is a light fresh dinner perfect for a hot summer night.
+          </div>
+          <div class="card">
+    
+{% endblock %}  

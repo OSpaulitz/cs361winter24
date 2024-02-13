@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title%}User{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+             </ul>
+        {% endif %}
+    {% endwith %}
+<p>Welcome To Your User Page</p>
+<p>To update your email, fill out the form below.</p>
+
+<form action="#" method="POST"></form>
+    <input type="email" name="email" placeholder="Enter Email" value="{{email if email}}"/>
+    <input type="submit" value="submit"/>
+</form>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+
+<h2>Saved Recipes</h2>
+
+<table>
+  <tr>
+    <th>Recipe name</th>
+    <th>Protein</th>
+    <th>Vegetables</th>
+    <th>Herbs/Spices</th>
+    <th>Instructions</th>
+  </tr>
+
+
+{% endblock %}

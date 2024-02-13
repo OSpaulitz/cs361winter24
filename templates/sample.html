@@ -1,0 +1,50 @@
+<!--i can use folder/wherever to reach a different location.-->
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+    <!-- i can put any html code here and it will be rendered for each page-->
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+    </style>
+    
+    <h2>Saved Recipes</h2>
+    
+    <table>
+      <tr>
+        <th>Recipe name</th>
+        <th>Protein</th>
+        <th>Instructions</th>
+      </tr>
+      <tr>
+        <td>Chicken Sandwiches</td>
+        <td>Chicken</td>
+        <td><a href="{{url_for('avocado_toast')}}">Go to Avocado Toast</a></td>
+        
+      </tr>
+      <tr>
+        <td>Albondiga Soup</td>
+        <td>Beef</td>
+        <td><a href="{{url_for('albondiga_soup')}}">Go to Albondiga Soup</a></td>
+      </tr>
+      <tr>
+        <td>Everything Quiche</td>
+        <td>Egg</td>
+        <td><a href="{{url_for('summer_soup')}}">Go to Summer Soup</a></td>
+      </tr>
+
+    
+{% endblock %}  
